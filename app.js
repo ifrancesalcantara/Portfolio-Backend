@@ -9,10 +9,7 @@ const MongoStore = require("connect-mongo")(session)
 const cors = require("cors")
 require("dotenv").config()
 
-const auth = require("./routes/auth")
-const usersRouter = require("./routes/users_router")
-const paintingsRouter = require("./routes/paintings_router")
-const chatRouter = require("./routes/chat_router")
+const projectRouter = require("./routes/project_router")
 
 // MONGOOSE CONNECTION
 mongoose
@@ -34,7 +31,7 @@ const app = express()
 app.use(
   cors({
     credentials: true,
-    origin: [process.env.PUBLIC_DOMAIN, "https://paintapop.herokuapp.com/"]
+    origin: [process.env.PUBLIC_DOMAIN/*, "https://paintapop.herokuapp.com/"*/]
   })
 )
 
@@ -62,10 +59,7 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, "public")))
 
 // ROUTER MIDDLEWARE
-app.use("/auth", auth)
-app.use("/users", usersRouter)
-app.use("/paintings", paintingsRouter)
-app.use("/chat", chatRouter)
+app.use("/project", projectRouter)
 
 // ROUTE FOR SERVING REACT APP (index.html)
 app.use((req, res, next) => {
