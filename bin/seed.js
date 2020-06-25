@@ -6,19 +6,19 @@ const projectsInfo=[
     {
         name:"portfolio",
         subtitle:"My presentation card",
-        techs:["react", "redux", "styled", "nodejs"],
+        techs:["react", "redux", "styled", "nodejs", "express"],
         mainText:"Portfolio under development, focused on clean code and best practices. Currently the best reference for my web development skills. Contact me for the link.\n \n       React, Redux, Styled-Components",
         img:"./Images/Projects/port.png",
         media:["pc"],
         gitHub:{
             frontend:"https://github.com/ifrancesalcantara/Portfolio",
-            backend:"",
+            backend:"https://github.com/ifrancesalcantara/Portfolio-Backend",
             repository:""
         }
     },{
         name:"paintapop",
         subtitle:"Get some cool looking figures",
-        techs:["react", "mongo", "css3", "nodejs"],
+        techs:["react", "mongo", "css3", "nodejs", "express"],
         mainText:"A mobile application that allows users to trade painting services. The user can browse and post cards showing thier style, connecting with the card's creator with a chat.",
         img:"./Images/Projects/paintapop.png",
         link:"https://paintapop.herokuapp.com/",
@@ -30,7 +30,7 @@ const projectsInfo=[
         }
     },{
         name:"bombard",
-        subtitle:"Scape from your audience",
+        subtitle:"Escape from your audience",
         techs:["javascript", "css3", "html5", "express"],
         mainText:"A maze scape game based off Bomberman, where the user has to exit the town avoiding being bitten by angry dogs and making their way by destroying blocks. In the PvP mode, both players fight to death with the help of random cards. Developed with HTML canvas and Javascript.",
         img:"./Images/Projects/bombard.png",
